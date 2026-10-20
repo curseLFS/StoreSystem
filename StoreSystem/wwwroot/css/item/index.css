@@ -1,0 +1,32 @@
+﻿.table tbody tr {
+    transition: all .2s ease;
+}
+
+.table tbody tr:hover {
+    background: #fff8ed;
+    transform: scale(1.002);
+}
+
+.card {
+    border: none;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0,0,0,.08);
+}
+
+.inventory-header {
+    background: linear-gradient( 135deg, #9c6a21, #c18a37 );
+    color: white;
+}
+
+.inventory-header small {
+    color: rgba(255,255,255,.8);
+}
+
+.mini-stat {
+    background: white;
+    border-radius: 16px;
+    padding: 16px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,.05);
+}

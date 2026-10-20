@@ -1,0 +1,38 @@
+﻿.recent-sales-card {
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.recent-sales-card .card-header {
+    background: linear-gradient( 135deg, #9c6a21, #b67f2e );
+    padding: 1rem 1.5rem;
+    border: none;
+}
+
+.btn-light {
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current {
+    background: #9c6a21 !important;
+    color: #fff !important;
+    border-radius: 10px !important;
+    border: none !important;
+}
+
+.stat-box {
+    background: #fff;
+    border-radius: 16px;
+    padding: 16px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,.05);
+}
+
+.dataTables_length {
+    display: none;
+}
+
+.dataTables_info {
+    margin-left: 20px;
+}

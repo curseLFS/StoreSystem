@@ -1,0 +1,126 @@
+﻿@using StoreSystem.DAL.Models
+@model Item
+
+@{
+    ViewData["Title"] = "Item[Create]";
+}
+
+<link href="~/css/item/create.css" rel="stylesheet" />
+
+<div class="row justify-content-center">
+    <div class="col-lg-8">
+
+        <div class="card item-card border-0 shadow-lg">
+
+            <div class="card-header item-header">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <h3 class="mb-1">
+                            <i class="bi bi-box-seam me-2"></i>
+                            Add New Item
+                        </h3>
+                        <small>Create a new inventory item</small>
+                    </div>
+
+                    <div class="item-badge">
+                        Auto Generated Code
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-body p-4">
+
+                <form asp-action="Create" method="post">
+
+                    <div asp-validation-summary="All"
+                         class="alert alert-danger"></div>
+
+                    <div class="row g-4">
+
+                        <!-- Item Code -->
+                        <div class="col-md-6">
+                            <label class="form-label fw-semibold">
+                                Item Code
+                            </label>
+
+                            <div class="input-group">
+                                <span class="input-group-text">
+                                    <i class="bi bi-upc-scan"></i>
+                                </span>
+
+                                <input asp-for="ItemCode"
+                                       class="form-control"
+                                       readonly />
+                            </div>
+                        </div>
+
+                        <!-- Price -->
+                        <div class="col-md-6">
+                            <label class="form-label fw-semibold">
+                                Item Price
+                            </label>
+
+                            <div class="input-group">
+                                <span class="input-group-text">₱</span>
+
+                                <input asp-for="ItemPrice"
+                                       class="form-control" />
+                            </div>
+
+                            <span asp-validation-for="ItemPrice"
+                                  class="text-danger"></span>
+                        </div>
+
+                        <!-- Item Name -->
+                        <div class="col-12">
+                            <label class="form-label fw-semibold">
+                                Item Name
+                            </label>
+
+                            <input asp-for="ItemName"
+                                   class="form-control" />
+
+                            <span asp-validation-for="ItemName"
+                                  class="text-danger"></span>
+                        </div>
+
+                        <!-- Description -->
+                        <div class="col-12">
+                            <label class="form-label fw-semibold">
+                                Item Description
+                            </label>
+
+                            <textarea asp-for="ItemDescription"
+                                      rows="4"
+                                      class="form-control"
+                                      placeholder="Enter item description..."></textarea>
+                        </div>
+
+                    </div>
+
+                    <hr class="my-4" />
+
+                    <div class="d-flex justify-content-end gap-2">
+
+                        <a asp-action="Index"
+                           class="btn btn-outline-secondary">
+                            <i class="bi bi-arrow-left"></i>
+                            Back
+                        </a>
+
+                        <button type="submit"
+                                class="btn btn-save">
+                            <i class="bi bi-check-circle-fill"></i>
+                            Save Item
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>

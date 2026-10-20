@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="StoreSystem.DAL/StoreSystem.DAL.csproj" />
+  <Project Path="StoreSystem/StoreSystem.csproj" />
+</Solution>

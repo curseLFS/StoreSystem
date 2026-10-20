@@ -1,0 +1,88 @@
+﻿
+@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<link href="~/css/home/index.css" rel="stylesheet" />
+
+<div class="row g-4">
+    <div class="col-md-3">
+        <div class="card border-0 shadow-sm bg-primary text-white">
+            <div class="card-body">
+                <h6>Total Items</h6>
+                <div id="totalItems"></div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card border-0 shadow-sm bg-success text-white">
+            <div class="card-body">
+                <h6>Total Purchased</h6>
+                <div id="totalPurchased"></div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card border-0 shadow-sm bg-danger text-white">
+            <div class="card-body">
+                <h6>Total Sold</h6>
+                <div id="totalSold"></div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card border-0 shadow-sm bg-warning text-white">
+            <div class="card-body">
+                <h6>Current Stock</h6>
+                <div id="currentStock"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-5">
+
+    <!-- Items -->
+    <div class="col-md-6">
+        <div class="card shadow-sm h-100">
+            <div class="card-header text-white">
+                <h3 class="mb-0">Items</h3>
+            </div>
+            <div class="card-body p-0">
+                 <div class="table-responsive">
+                    <table 
+                        id="homeTable" 
+                        class="table home-table table-bordered table-striped align-middle mb-0">
+                        <thead>
+                            <tr>
+                                <th>Code</th>
+                                <th>Name</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Overall Sales -->
+    <div class="col-md-6">
+        <div class="card shadow-sm h-100">
+            <div class="card-header text-white">
+                Overall Sales
+            </div>
+            <div class="card-body">
+                <div class="overallSales"></div>
+                <canvas id="overallSalesGraph"></canvas>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="~/js/home/index.js"></script>
+    <script src="~/js/home/bar.js"></script>
+}

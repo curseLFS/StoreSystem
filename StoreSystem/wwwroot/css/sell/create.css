@@ -1,0 +1,52 @@
+﻿.sell-card {
+    background: #fff;
+    border-radius: 20px;
+}
+
+.card-header {
+    background: linear-gradient( 135deg, #9c6a21, #c28a3f );
+    border-radius: 15px 15px 0 0 !important;
+}
+
+.form-control,
+.form-select {
+    border-radius: 12px;
+    min-height: 52px;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: #c28a3f;
+    box-shadow: 0 0 0 .25rem rgba(194,138,63,.2);
+}
+
+.stock-display {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background: #f8f9fa;
+    border-radius: 14px;
+    border: 1px solid #dee2e6;
+}
+
+.stock-icon {
+    width: 60px;
+    height: 60px;
+    background: #198754;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    border-radius: 14px 0 0 14px;
+}
+
+.btn-success {
+    border-radius: 12px;
+    font-weight: 600;
+}
+
+.btn-success:hover {
+    transform: translateY(-2px);
+    transition: .3s;
+}

@@ -1,0 +1,128 @@
+﻿@using StoreSystem.DAL.Models
+@model Sell
+
+@{
+    ViewData["Title"] = "Sell[Create]";
+}
+
+<link href="~/css/sell/create.css" rel="stylesheet" />
+
+<div class="card border-0 shadow-lg rounded-4 sell-card">
+
+    <div class="card-header border-0 py-3">
+        <h3 class="mb-0 text-white">
+            <i class="bi bi-cart-check me-2"></i>
+            Sell Item
+        </h3>
+    </div>
+
+    <div class="card-body p-4">
+
+        <form asp-action="Create" method="post">
+
+            <div asp-validation-summary="All" class="alert alert-danger"></div>
+
+            <div class="row g-4">
+
+                <!-- Item -->
+                <div class="col-md-6">
+                    <label class="form-label fw-semibold">
+                        <i class="bi bi-box-seam me-1"></i>
+                        Item
+                    </label>
+
+                    <select asp-for="ItemId"
+                            asp-items="ViewBag.Items"
+                            class="form-select form-select-lg">
+                        <option value="">Choose an Item</option>
+                    </select>
+                </div>
+
+                <!-- Stock Card -->
+                <div class="col-md-6">
+                    <label class="form-label fw-semibold">
+                        Available Stock
+                    </label>
+
+                    <div class="stock-display">
+                        <span class="stock-icon">
+                            <i class="bi bi-stack"></i>
+                        </span>
+
+                        <input id="countQuantity"
+                               class="form-control border-0 bg-transparent text-center fw-bold fs-4"
+                               readonly />
+                    </div>
+                </div>
+
+                <!-- Quantity -->
+                <div class="col-md-6">
+                    <label asp-for="Quantity"
+                           class="form-label fw-semibold">
+                    </label>
+                  
+                    <input id="quantity"
+                           asp-for="Quantity"
+                           class="form-control form-control-lg" />
+                </div>
+
+                <!-- Selling Price -->
+                <div class="col-md-6">
+                    <label class="form-label fw-semibold">
+                        Selling Price
+                    </label>
+
+                    <div class="input-group input-group-lg">
+                        <span class="input-group-text">₱</span>
+
+                        <input id="sellingPrice"
+                               asp-for="SellingPrice"
+                               class="form-control" />
+                    </div>
+                </div>
+
+                <!-- Date -->
+                <div class="col-md-12">
+                    <label class="form-label fw-semibold">
+                        Sell Date
+                    </label>
+
+                    <input asp-for="SellDate"
+                           type="date"
+                           class="form-control form-control-lg"
+                           value="@DateTime.Today.ToString("yyyy-MM-dd")"
+                           readonly />
+                </div>
+
+                <!-- Submit -->
+                <div class="col-12">
+
+                     <a asp-action="Index"
+                           class="btn btn-outline-secondary">
+
+                            <i class="bi bi-arrow-left"></i>
+                            Back
+
+                        </a>
+
+                    <button type="submit"
+                            class="btn btn-lg btn-success px-5 shadow-sm">
+
+                        <i class="bi bi-check-circle-fill me-2"></i>
+                        Complete Sale
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+@section Scripts {
+    <script src="~/js/sell/create.js"></script>
+}
